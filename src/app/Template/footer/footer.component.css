@@ -1,0 +1,15 @@
+
+footer{
+    position:relative;
+    left: 0;
+    bottom:0;
+    width: 100%;
+    margin-bottom: 0%;
+
+    /* background-color: blue; */
+}
+.mb-4{
+    background-color: rgb(212, 230, 250);
+    margin-left: -80px;
+    margin-right: -80px;
+}
