@@ -24,7 +24,7 @@ export class CustomerDetails
     customerQualification:string;
     customerLoanStatus:string;
     customerLoanAmountRequired:number;
-
+    customerdocstatus:string;
     customerAddress:CustomerAddress;
     customerProfession:CustomerProfession;
     customerBankDetails:CustomerBankDetails;

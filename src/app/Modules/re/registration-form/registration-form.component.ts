@@ -178,6 +178,7 @@ export class RegistrationFormComponent implements OnInit {
       customerQualification:[],
       customerLoanStatus:[],
       customerLoanAmountRequired:[],
+      customerdocstatus:[],
   
       customerAddress : this.formBuilder.group({
       addressId:[],
@@ -222,7 +223,7 @@ export class RegistrationFormComponent implements OnInit {
   get document() { return this.addCustomerAllDocuments.controls; }
   next() {
     this.step++
-    console.log(this.step)
+   // console.log(this.step)
     if (this.step == 1) {
       this.CustomerDetails = true;
       // if (this.addCustomerForm.invalid) { return }

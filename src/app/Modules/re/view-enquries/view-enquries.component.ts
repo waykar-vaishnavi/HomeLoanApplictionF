@@ -24,4 +24,11 @@ oneditcibil(ceqd:CustomerEnquiryDetails)
    console.log(ceqd)
    window.location.reload();
 }
+sendApprovedMail(id:CustomerEnquiryDetails)
+{
+  alert("your mail send Successfully")
+  this.http.sendMail(id).subscribe((data:CustomerEnquiryDetails[])=>{
+ 
+  });
+}
 }

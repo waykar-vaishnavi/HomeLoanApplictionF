@@ -28,7 +28,7 @@
             <td>{{ a.cibil.cstatus}}</td>
             <td>{{a.cibil.cscore}}</td>
             <td><button type="button" (click)="oneditcibil(a)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button></td>
-            
+            <td><button class="btn" (click)="sendApprovedMail(a)">Send <i class="fa fa-envelope-o" aria-hidden="true"></i></button></td>
         </tr>
     </tbody>
 

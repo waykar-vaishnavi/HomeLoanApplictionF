@@ -13,3 +13,13 @@ footer{
     margin-left: -80px;
     margin-right: -80px;
 }
+a{
+    font-style: italic;
+    text-shadow: 1px;
+    font-weight: bold;
+}
+.text-center{
+    font-weight: bold;
+    color: rgba(56, 115, 224, 0.961);
+    font-size:medium
+}

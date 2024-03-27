@@ -12,7 +12,7 @@ export class Usermenu
                   ],
                re:[
                     {lable:'View Enquiries',link:'view_enquiry'},
-                    {lable:'Register New Enquiry',link:'register_neEnquiry'},
+                    {lable:'View Customer',link:'register_neEnquiry'},
                     {lable:'Cibil Approved',link:'cibil_approved'},
                     {lable:'Cibil Rejected',link:'cibil_rejected'},
                     {lable:'View Application Status',link:'viewApp_status'},
@@ -23,6 +23,10 @@ export class Usermenu
                   ],
                oe:[
                     {lable:'Verify Application',link:'verify_bycm_application'},
+                    {lable:'Documents Verifivation',link:'edit/:verifyDocuments'},
+                    {lable:'Approved Documents Customer',link:'aprrovedDoc'},
+                    {lable:'Rejected Documents Customer',link:'rejectedDoc'},
+                    
                   ],
                cm:[
                     {lable:'View Verified Application',link:'verify_application'},
