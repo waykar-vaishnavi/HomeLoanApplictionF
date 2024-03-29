@@ -10,10 +10,10 @@ import { FormGroup } from '@angular/forms';
 })
 export class DocumentRejectCustomerComponent implements OnInit{
   constructor(private http:CommonserviceService){ }
-  viewRejectedCustomer:any;
+  viewRejectedCustomer:CustomerDetails[];
   addCustomerForm: FormGroup;
   ngOnInit(): void {
-    this.http.getrejectCustommerEnquiries().subscribe((data:any)=>{
+    this.http.RejectedDocuments().subscribe((data:CustomerDetails[])=>{
       this.viewRejectedCustomer = data;
     });
   }

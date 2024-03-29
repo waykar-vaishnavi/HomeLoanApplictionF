@@ -13,7 +13,7 @@ export class DocumentApprovedCustomerComponent implements OnInit {
   viewAprovedCustomer:CustomerDetails[];
   addCustomerForm: FormGroup;
   ngOnInit(): void {
-    this.http.getapprovedCustomerenquries().subscribe((data:CustomerDetails[])=>{
+    this.http.ApprovedDocuments().subscribe((data:CustomerDetails[])=>{
       this.viewAprovedCustomer = data;
     });
   }

@@ -9,14 +9,14 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './verify-cm-application.component.html',
   styleUrl: './verify-cm-application.component.css'
 })
-export class VerifyCmApplicationComponent {
+export class VerifyCmApplicationComponent implements OnInit{
   constructor(private http:CommonserviceService,private router : Router){ }
   viewCustomer:CustomerDetails[];
-  addCustomerForm: FormGroup;
+  //addCustomerForm: FormGroup;
   updatecus:CustomerDetails[];
   loanSt:string
 
-  c:any;
+  // c:any;
 cc:any;
   ngOnInit(): void {
     this.http.getCustomer().subscribe((data:CustomerDetails[])=>{
@@ -25,8 +25,9 @@ cc:any;
   }
 
   oneditDoc(cc:CustomerDetails)
-  {const roles = document.getElementsByName("satus") as NodeListOf<HTMLInputElement>;
-  for (var i = 0; i < roles.length; i++) {
+  {
+    const roles = document.getElementsByName("satus") as NodeListOf<HTMLInputElement>;
+    for (var i = 0; i < roles.length; i++) {
     if(roles[i].checked){
           if(roles[i].value==="Approved"){
           alert("Approved");
@@ -51,5 +52,11 @@ cc:any;
     let docjson:String =JSON.stringify(id);
     this.router.navigateByUrl('/userdash/oe/verifyDocument/'+docjson)
   }
+  sendApprovedDocMail(email:CustomerDetails)
+  {
+    alert("your mail send Successfully")
+  this.http.sendDocumentMail(email).subscribe((data:CustomerDetails[])=>{
  
+  });
+  }
 }

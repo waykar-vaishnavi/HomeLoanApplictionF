@@ -7,13 +7,15 @@
                 <th>Customer First Name</th>
                 <th>Customer Last Name</th>
                 <th>Customer Mobile Number</th>
+                <th>Customer Email Id</th>
                 <th>Customer PanCard</th>
                 <th>Customer Income Certificate</th>
                 <th>Customer Adhar Card</th>
                 <th>Customer Profile Photo</th>
                 <th>Customer Signature</th>
                 <th>Customer Bank Passbook</th>
-                <th colspan="2">Document Verification</th>
+                <th>Customer Document Status</th>
+                <th colspan="4">Document Verification</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +24,7 @@
                 <td>{{ a.customerFirstName}}</td>
                 <td>{{ a.customerLastName}}</td>
                 <td>{{ a.customerMobileNumber}}</td>
+                <td>{{a.customerEmail}}</td>
                 <td>
                 <img [src]="'data:image/jpeg;base64,'+a.customerAllDocuments.panCard" height="75px" width="75px">
                 </td>
@@ -40,6 +43,7 @@
                     <td>
                     <img [src]="'data:image/jpeg;base64,'+a.customerAllDocuments.bankPassBook" height="75px" width="75px">
                     </td>
+                    <td>{{a.customerdocstatus}}</td>
                     <td>
                         <div>
                         <label class="from-label" for="Approved" style="width: 70px;">Approved</label>
@@ -49,8 +53,9 @@
                         <span><input type="radio" id="doc" value="Rejected" name="satus" formControlName="customerdocstatus"></span>
                     </div>
                     </td>
-                    <td><button type="button" (click)="oneditDoc(a)">Submit</button></td>
-                    <td><button type="button" (click)="onViewDocuments(a.customerApplicationId)">View</button></td>
+                    <td><button type="button" (click)="oneditDoc(a)">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" (click)="onViewDocuments(a.customerApplicationId)">View</button></td>
+                    <td><button class="btn" (click)="sendApprovedDocMail(a)">Send <i class="fa fa-envelope-o" aria-hidden="true"></i></button></td>
             </tr>
         </tbody>
     </table>

@@ -206,7 +206,7 @@ export class RegistrationFormComponent implements OnInit {
     }),
 
     customerBankDetails : this.formBuilder.group({
-      customerBankDetailsId:[],
+    customerBankDetailsId:[],
     customerBankAccountNumber:[],
     customerBankName:[],
     customerBankBranchName:[],
@@ -231,23 +231,15 @@ export class RegistrationFormComponent implements OnInit {
     }
     if (this.step == 2) {
       this.CustomerAddress = true;
-      // if (this.addCustomerAddress.invalid) { return }
-      // this.step++;
     }
     if (this.step == 3) {
       this.CustomerProfession = true;
-      // if (this.addCustomerProfession.invalid) { return }
-      // this.step++;
     }
     if (this.step == 4) {
       this.CustomerBankDetails = true;
-      // if (this.addCustomerBankDetails.invalid) { return }
-      // this.step++;
     }
     if (this.step == 5) {
       this.CustomerAllDocuments = true;
-      // if (this.addCustomerAllDocuments.invalid) { return }
-      // this.step++;
     }
   }
   previous() {
